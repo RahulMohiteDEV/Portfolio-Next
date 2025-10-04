@@ -524,104 +524,119 @@ const Portfolio = () => {
                 </div>
             </section>
 
-            {/* Projects Section */}
-            <section id="projects" ref={sectionRefs.projects} className="py-24 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-gray-800/20 to-gray-900/40"></div>
-                
-                <div className="container mx-auto px-6 relative z-10">
-                    <div className="text-center mb-20">
-                        <h2 className="text-5xl md:text-6xl font-bold mb-6">
-                            <span className="bg-gradient-to-r from-emerald-400 to-purple-400 bg-clip-text text-transparent">
-                                Featured Projects
-                            </span>
-                        </h2>
-                        <div className="w-32 h-1 bg-gradient-to-r from-emerald-400 to-purple-400 mx-auto rounded-full mb-4"></div>
-                        <p className="text-gray-400 text-lg max-w-3xl mx-auto">
-                            A showcase of my recent work and creative solutions
-                        </p>
+           {/* Projects Section */}
+<section id="projects" ref={sectionRefs.projects} className="py-24 relative overflow-hidden">
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-800/20 to-gray-900/40"></div>
+    
+    <div className="container mx-auto px-6 relative z-10">
+        <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-6xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-emerald-400 to-purple-400 bg-clip-text text-transparent">
+                    Featured Projects
+                </span>
+            </h2>
+            <div className="w-32 h-1 bg-gradient-to-r from-emerald-400 to-purple-400 mx-auto rounded-full mb-4"></div>
+            <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+                A showcase of my recent work and creative solutions
+            </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+                {
+                    title: 'Soil Report Generator',
+                    description: 'A comprehensive, multilingual web application for soil analysis and reporting that helps farmers and agricultural professionals analyze soil nutrients With responsive design.',
+                    technologies: ['React', 'JavaScript', 'Tailwind CSS','Recharts','html2canvas'],
+                    demoLink: 'https://soil-report-generator-b12a.vercel.app/',
+                    featured: true,
+                    bgImage: '/Soil.jpg'
+                },
+                {
+                    title: 'Task Management App',
+                    description: 'Productivity application for managing tasks with drag-and-drop functionality, categories, and local storage persistence.',
+                    technologies: ['React', 'HTML5', 'CSS3', 'JavaScript', 'Local Storage'],
+                    demoLink: '#',
+                    featured: false,
+                    bgImage: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80' // Productivity background
+                },
+                {
+                    title: 'Weather Dashboard',
+                    description: 'Real-time weather application with location detection, 5-day forecast, and interactive weather maps.',
+                    technologies: ['JavaScript', 'API Integration', 'CSS3', 'HTML5', 'Chart.js'],
+                    demoLink: '#',
+                    featured: false,
+                    bgImage: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80' // Weather background
+                }
+            ].map((project, index) => (
+                <div
+                    key={index}
+                    className="group relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl border-2 border-gray-700 shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-4 overflow-hidden"
+                >
+                    {project.featured && (
+                        <div className="absolute top-4 left-4 bg-gradient-to-r from-amber-400 to-amber-500 text-gray-900 text-xs font-bold px-4 py-2 rounded-full z-10 flex items-center shadow-lg">
+                            <StarIcon className="h-3 w-3 mr-1" />
+                            Featured Project
+                        </div>
+                    )}
+                    
+                    {/* Project image/icon with background image */}
+                    <div 
+                        className="h-48 relative overflow-hidden bg-gradient-to-br from-gray-700 to-gray-800"
+                        style={{
+                            backgroundImage: `url('${project.bgImage}')`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                            backgroundRepeat: 'no-repeat'
+                        }}
+                    >
+                        
+                        {/* Content overlay */}
+                        <div className="absolute inset-0 flex items-center justify-center">
+                            <div className="text-center p-6 relative z-10">
+                                <CodeBracketIcon className="h-16 w-16 mx-auto mb-4 text-emerald-400 opacity-90 drop-shadow-lg" />
+                                <span className="text-white font-semibold text-lg drop-shadow-lg">{project.title}</span>
+                            </div>
+                        </div>
+                        
+                        {/* Hover effect */}
+                        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {[
-                            {
-                                title: 'E-Commerce Platform',
-                                description: 'Full-featured online shopping platform with product listings, cart functionality, user authentication, and responsive design.',
-                                technologies: ['React', 'JavaScript', 'Tailwind CSS', 'Context API', 'Node.js'],
-                                demoLink: 'https://e-commerce-shop-mqi0.onrender.com/',
-                                featured: true
-                            },
-                            {
-                                title: 'Task Management App',
-                                description: 'Productivity application for managing tasks with drag-and-drop functionality, categories, and local storage persistence.',
-                                technologies: ['React', 'HTML5', 'CSS3', 'JavaScript', 'Local Storage'],
-                                demoLink: '#',
-                                featured: false
-                            },
-                            {
-                                title: 'Weather Dashboard',
-                                description: 'Real-time weather application with location detection, 5-day forecast, and interactive weather maps.',
-                                technologies: ['JavaScript', 'API Integration', 'CSS3', 'HTML5', 'Chart.js'],
-                                demoLink: '#',
-                                featured: false
-                            }
-                        ].map((project, index) => (
-                            <div
-                                key={index}
-                                className="group relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl border-2 border-gray-700 shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-4 overflow-hidden"
+                    {/* Project content */}
+                    <div className="p-8">
+                        <h3 className="text-xl font-bold text-gray-200 mb-4 group-hover:text-emerald-400 transition-colors duration-300">
+                            {project.title}
+                        </h3>
+                        <p className="text-gray-400 mb-6 leading-relaxed">
+                            {project.description}
+                        </p>
+                        
+                        <div className="flex flex-wrap gap-2 mb-6">
+                            {project.technologies.map((tech, i) => (
+                                <span key={i} className="px-3 py-1 bg-gray-700 text-gray-300 rounded-lg text-xs font-medium border border-gray-600">
+                                    {tech}
+                                </span>
+                            ))}
+                        </div>
+                        
+                        <div className="flex justify-between items-center">
+                            <a
+                                href={project.demoLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-purple-500 text-white rounded-xl hover:from-emerald-600 hover:to-purple-600 transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl group/link"
                             >
-                                {project.featured && (
-                                    <div className="absolute top-4 left-4 bg-gradient-to-r from-amber-400 to-amber-500 text-gray-900 text-xs font-bold px-4 py-2 rounded-full z-10 flex items-center shadow-lg">
-                                        <StarIcon className="h-3 w-3 mr-1" />
-                                        Featured Project
-                                    </div>
-                                )}
-                                
-                                {/* Project image/icon */}
-                                <div className="h-48 relative overflow-hidden bg-gradient-to-br from-gray-700 to-gray-800">
-                                    <div className="absolute inset-0 flex items-center justify-center">
-                                        <div className="text-center p-6">
-                                            <CodeBracketIcon className="h-16 w-16 mx-auto mb-4 text-emerald-400 opacity-80" />
-                                            <span className="text-gray-300 font-semibold text-lg">{project.title}</span>
-                                        </div>
-                                    </div>
-                                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                </div>
-
-                                {/* Project content */}
-                                <div className="p-8">
-                                    <h3 className="text-xl font-bold text-gray-200 mb-4 group-hover:text-emerald-400 transition-colors duration-300">
-                                        {project.title}
-                                    </h3>
-                                    <p className="text-gray-400 mb-6 leading-relaxed">
-                                        {project.description}
-                                    </p>
-                                    
-                                    <div className="flex flex-wrap gap-2 mb-6">
-                                        {project.technologies.map((tech, i) => (
-                                            <span key={i} className="px-3 py-1 bg-gray-700 text-gray-300 rounded-lg text-xs font-medium border border-gray-600">
-                                                {tech}
-                                            </span>
-                                        ))}
-                                    </div>
-                                    
-                                    <div className="flex justify-between items-center">
-                                        <a
-                                            href={project.demoLink}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-purple-500 text-white rounded-xl hover:from-emerald-600 hover:to-purple-600 transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl group/link"
-                                        >
-                                            <span>Live Demo</span>
-                                            <ArrowTopRightOnSquareIcon className="h-4 w-4 ml-2 group-hover/link:translate-x-1 transition-transform duration-300" />
-                                        </a>
-                                        <span className="text-gray-500 text-sm">#{String(index + 1).padStart(2, '0')}</span>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
+                                <span>Live Demo</span>
+                                <ArrowTopRightOnSquareIcon className="h-4 w-4 ml-2 group-hover/link:translate-x-1 transition-transform duration-300" />
+                            </a>
+                            <span className="text-gray-500 text-sm">#{String(index + 1).padStart(2, '0')}</span>
+                        </div>
                     </div>
                 </div>
-            </section>
+            ))}
+        </div>
+    </div>
+</section>
 
             {/* Contact Section */}
             <section id="contact" ref={sectionRefs.contact} className="py-24 relative overflow-hidden">
