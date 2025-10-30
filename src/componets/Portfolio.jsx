@@ -505,18 +505,18 @@ const Portfolio = () => {
                             {
                                 title: 'Soil Report Generator',
                                 description: 'A comprehensive, multilingual web application for soil analysis and reporting that helps farmers and agricultural professionals analyze soil nutrients With responsive design.',
-                                technologies: ['React', 'JavaScript', 'Tailwind CSS','Recharts','html2canvas'],
+                                technologies: ['React', 'HTML5', 'JavaScript', 'Tailwind CSS','Recharts','html2canvas'],
                                 demoLink: 'https://soil-report-generator-b12a.vercel.app/',
                                 featured: true,
                                 bgImage: '/Soil.jpg'
                             },
                             {
-                                title: 'Task Management App',
-                                description: 'Productivity application for managing tasks with drag-and-drop functionality, categories, and local storage persistence.',
-                                technologies: ['React', 'HTML5', 'CSS3', 'JavaScript', 'Local Storage'],
-                                demoLink: '#',
+                                title: 'Task Management System',
+                                description: 'Tired of tasks getting lost in messy spreadsheets and endless email chains? Our system organizes everything in one clean platform that works offline—no setup or subscriptions needed. Perfect for small teams who want to track progress and assign tasks without the complexity.',
+                                technologies: ['React', 'HTML5', 'Tailwind CSS', 'JavaScript', 'Local Storage'],
+                                demoLink: 'https://employee-task-management-system-ten.vercel.app/',
                                 featured: false,
-                                bgImage: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
+                                bgImage: '/EMS.png'
                             },
                             {
                                 title: 'Weather Dashboard',
@@ -540,7 +540,7 @@ const Portfolio = () => {
                                 
                                 {/* Project image/icon with background image */}
                                 <div 
-                                    className="h-48 relative overflow-hidden bg-gray-700"
+                                    className="h-64 relative overflow-hidden bg-gray-700"
                                     style={{
                                         backgroundImage: `url('${project.bgImage}')`,
                                         backgroundSize: 'cover',
@@ -552,8 +552,6 @@ const Portfolio = () => {
                                     {/* Content overlay */}
                                     <div className="absolute inset-0 flex items-center justify-center">
                                         <div className="text-center p-6 relative z-10">
-                                            <CodeBracketIcon className="h-16 w-16 mx-auto mb-4 text-emerald-400 opacity-90 drop-shadow-lg" />
-                                            <span className="text-white font-semibold text-lg drop-shadow-lg">{project.title}</span>
                                         </div>
                                     </div>
                                 </div>
