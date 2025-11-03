@@ -5,7 +5,7 @@ const Projects = ({ sectionRefs }) => {
         {
             title: 'Soil Report Generator',
             description: 'A comprehensive, multilingual web application for soil analysis and reporting that helps farmers and agricultural professionals analyze soil nutrients with responsive design.',
-            technologies: ['React', 'HTML5', 'JavaScript', 'Tailwind CSS','Recharts','html2canvas'],
+            technologies: ['React', 'HTML5', 'JavaScript', 'Node.js', 'Tailwind CSS','Recharts','html2canvas'],
             demoLink: 'https://soil-report-generator-b12a.vercel.app/',
             featured: true,
             bgImage: '/Soil.jpg'
@@ -13,7 +13,7 @@ const Projects = ({ sectionRefs }) => {
         {
             title: 'Task Management System',
             description: 'Organize everything in one clean platform that works offline—no setup or subscriptions needed. Perfect for small teams who want to track progress and assign tasks.',
-            technologies: ['React', 'HTML5', 'Tailwind CSS', 'JavaScript', 'Local Storage'],
+            technologies: ['React', 'HTML5', 'Tailwind CSS', 'JavaScript', 'Local Storage','Node.js'],
             demoLink: 'https://employee-task-management-system-ten.vercel.app/',
             featured: false,
             bgImage: '/EMS.png'
