@@ -565,14 +565,7 @@ const Portfolio = () => {
                                     featured: false,
                                     bgImage: '/EMS.png'
                                 },
-                                {
-                                    title: 'Weather Dashboard',
-                                    description: 'Real-time weather application with location detection, 5-day forecast, and interactive weather maps. Built with modern web technologies.',
-                                    technologies: ['JavaScript', 'API Integration', 'CSS3', 'HTML5', 'Chart.js'],
-                                    demoLink: '#',
-                                    featured: false,
-                                    bgImage: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
-                                }
+                              
                             ].map((project, index) => (
                                 <div
                                     key={index}
